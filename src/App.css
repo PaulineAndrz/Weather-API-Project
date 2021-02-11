@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: rgb(93, 160, 204);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  margin: 0 15rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center {
+  text-align: center;
 }
+
+h2 {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flex p {
+  padding: 0 1rem;
+}
+
+
+/* Header */
+
+header {
+  background-color: rgba(39, 117, 153, 0.644);
+  box-shadow: 0rem 0.1rem 0.4rem rgb(30, 90, 117);
+  margin: 0 0 1.5rem 0;
+}
+
+header h1 {
+  padding: 1rem;  
+  margin: 0;
+}
+
+/* Result */
+
+.result-container {
+  margin: 2rem 14rem;
+} 
+
+.result-details-container {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.157);
+  box-shadow: 0rem 0.1rem 0.3rem rgba(23, 63, 100, 0.281);
+  border-radius:5%
+}
+
+.important-details-container {
+  background-color: rgba(39, 117, 153, 0.644);
+  box-shadow: 0rem 0.1rem 0.3rem rgb(17, 104, 144);
+  margin: 1rem 0;
+}
+
+/* Research Form */
+
+.city-search-form h2 {
+  margin-bottom: 0.7rem;
+}
+
+.city-search-form form input {
+  padding: 0.3rem 0.4rem;
+  box-shadow: 0rem 0.1rem 0.3rem rgba(30, 89, 117, 0.473);
+  border: none;
+  border-radius: 3%;
+}
+
+.city-search-form form input:focus {
+  outline: none;
+}
+
+/* Research Button */
+
+.search-btn {
+  background-color: rgba(39, 117, 153, 0.644);
+  box-shadow: 0rem 0.1rem 0.1rem rgba(30, 89, 117, 0.678);
+  color: white;
+  border: none;
+  border-radius: 3%;
+  padding: 0.3rem 0.4rem;
+  margin-left: 0.35rem;
+}
+
+.search-btn:focus {
+  outline: none;
+}
+
+.search-btn:hover {
+  background-color: rgba(39, 117, 153, 0.849);
+}
+

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { useState, Fragment } from 'react';
+import { CitySearchForm } from './components/CitySearchForm';
+import { WeatherCard } from './components/WeatherCard';
+import { Header } from './components/commons/Header';
+
 import './App.css';
 
-function App() {
+
+export default function App() {
+
+  const [city, setCity] = useState('');
+
+  const handleChange = (searchedCity) => {
+    setCity(searchedCity);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="center">
+        <Header />
+        <div className="container" >
+          <CitySearchForm handleChange={handleChange} />
+          {city && <WeatherCard city={city} />}
+        </div>
+      </div>
+    </Fragment>
   );
 }
-
-export default App;
