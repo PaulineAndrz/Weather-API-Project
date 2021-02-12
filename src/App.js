@@ -1,5 +1,5 @@
 import { useState, Fragment } from 'react';
-import { CitySearchForm } from './components/CitySearchForm';
+import { CitySearch } from './components/CitySearch';
 import { WeatherCard } from './components/WeatherCard';
 import { Header } from './components/commons/Header';
 
@@ -14,12 +14,14 @@ export default function App() {
     setCity(searchedCity);
   }
 
+  // https://github.com/PaulineAndrz/Weather-API-Project.git
+
   return (
     <Fragment>
       <div className="center">
         <Header />
         <div className="container" >
-          <CitySearchForm handleChange={handleChange} />
+          <CitySearch handleChange={handleChange} />
           {city && <WeatherCard city={city} />}
         </div>
       </div>

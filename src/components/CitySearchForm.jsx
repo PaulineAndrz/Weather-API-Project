@@ -1,27 +1,12 @@
-import React, { useState, Fragment } from 'react'
-import { Form } from './Form'
+import React from 'react'
+import { Button } from './commons/Button'
 
 export const CitySearchForm = (props) => {
-  const [searchedCity, setSearchedCity] = useState('');
-
-  const handleChange = (event) => {
-    setSearchedCity(event.target.value)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.handleChange(searchedCity);
-  }
-
-  return (
-    <Fragment>
-      <div className="city-search-form">
-        <h2>Rechercher une ville</h2>
-        <Form searchedCity={searchedCity}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
-      </div>
-    </Fragment>
-  )
+    return (
+        <form onSubmit={props.handleSubmit} action="">
+            <input type="text" name="searchedCity" onChange={(event) => props.handleChange(event)}/>
+            <Button />
+        </form>
+    )
 }
+

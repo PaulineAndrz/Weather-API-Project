@@ -4,19 +4,19 @@ import { WeatherCardDetails } from './WeatherCardDetails';
 
 export const WeatherCard = (props) => {
 
-    const [weather, setWeather] = useState('');
+    const [weatherData, setWeatherData] = useState('');
 
     useEffect(() => {
         refreshWeather()
     }, [props.city])
 
     const refreshWeather = () => {
-        WeatherService.getWeatherByCity(`${props.city}`).then((weatherByCity) => setWeather(weatherByCity) );
+        WeatherService.getWeatherByCity(`${props.city}`).then((weatherByCity) => setWeatherData(weatherByCity));
     }
 
     return (
         <Fragment>
-            { weather != "" && <WeatherCardDetails weather={weather}/> }
+            { weatherData != "" && <WeatherCardDetails weatherData={weatherData}/> }
         </Fragment>
         
     )

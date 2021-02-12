@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-  margin: 0 15rem;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 .center {
@@ -25,7 +26,7 @@ h2 {
 }
 
 .flex p {
-  padding: 0 1rem;
+  padding: 0 0.6rem;
 }
 
 
@@ -45,20 +46,33 @@ header h1 {
 /* Result */
 
 .result-container {
-  margin: 2rem 14rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 20rem;
+    
 } 
 
 .result-details-container {
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.157);
   box-shadow: 0rem 0.1rem 0.3rem rgba(23, 63, 100, 0.281);
-  border-radius:5%
+  border-radius:0.8rem
 }
 
 .important-details-container {
   background-color: rgba(39, 117, 153, 0.644);
   box-shadow: 0rem 0.1rem 0.3rem rgb(17, 104, 144);
   margin: 1rem 0;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.important-details-container p {
+  font-size: 1.2rem;
+}
+
+.found img {
+  width: 4rem;
 }
 
 /* Research Form */
@@ -68,10 +82,12 @@ header h1 {
 }
 
 .city-search-form form input {
-  padding: 0.3rem 0.4rem;
+  padding: 0.5rem 0.4rem;
   box-shadow: 0rem 0.1rem 0.3rem rgba(30, 89, 117, 0.473);
   border: none;
-  border-radius: 3%;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  color: rgb(98, 98, 98);
 }
 
 .city-search-form form input:focus {
@@ -85,9 +101,10 @@ header h1 {
   box-shadow: 0rem 0.1rem 0.1rem rgba(30, 89, 117, 0.678);
   color: white;
   border: none;
-  border-radius: 3%;
   padding: 0.3rem 0.4rem;
   margin-left: 0.35rem;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
 }
 
 .search-btn:focus {
@@ -96,5 +113,14 @@ header h1 {
 
 .search-btn:hover {
   background-color: rgba(39, 117, 153, 0.849);
+}
+
+/* Not found */
+.not-found p {
+  margin-top: 0;
+}
+
+.not-found img {
+  width: 4rem;
 }
 

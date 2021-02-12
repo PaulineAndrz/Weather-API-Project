@@ -8,9 +8,9 @@ export const WeatherCardDetails = (props) => {
     return (
         <Fragment>
             <div className="result-container">
-                {props.weather.cod === notFoundCode ?
+                {props.weatherData.cod === notFoundCode ?
                     <CityNotFound /> :
-                    <WeatherDetailsByCity weather={props.weather} />
+                    <WeatherDetailsByCity weatherData={props.weatherData} />
                 }
             </div>
         </Fragment>
